@@ -3,7 +3,7 @@ Nitron
 
 Introduction
 ----------
-Nitron Data is an opinionated CoreData wrapper for RubyMotion
+Nitron Data is an opinionated CoreData wrapper for RubyMotion extracted from https://github.com/mattgreen/nitron/
 
 Installation
 ----------
@@ -29,28 +29,6 @@ And build your application:
 
 `rake`
 
-Example
-------
-A modal view controller responsible for creating new `Tasks`:
-
-```ruby
-class TaskCreateViewController < Nitron::ViewController
-  # The on class method is part of Nitron's Action DSL.
-  # It wires the provided block to be an event handler for the specified outlet using the iOS target/action pattern.
-  on :cancel do
-    close
-  end
-
-  # Nitron emulates 'native' outlet support, allowing you to easily define outlets through Xcode.
-  # The titleField and datePicker methods are created upon initial load by using metadata contained in the Storyboard.
-  on :save do
-    Task.create(title: titleField.text, due: datePicker.date)
-
-    close
-  end
-end
-```
-
 Features
 ----------
 
@@ -58,6 +36,22 @@ Features
   XCode's data modeling tools with an ActiveRecord-like syntax
 * Migrations
   rake tasks to generate data models
+
+Example
+------
+A Task model
+
+```ruby
+class Task < NitronData::Model
+  attribute :name, String
+  attribute :created_at, Time
+  attribute :priority, "Decimal"
+end
+```
+
+Then create your xcdatamodel file with:
+
+`rake dm:migrate`
 
 CoreData ActiveRecord Support
 -----------------
