@@ -2,15 +2,15 @@
 require File.expand_path('../lib/nitron/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Matt Green"]
-  gem.email         = ["mattgreenrocks@gmail.com"]
-  gem.description   = "Turbocharged iOS development via RubyMotion"
-  gem.summary       = "Turbocharged iOS development via RubyMotion"
-  gem.homepage      = "https://github.com/mattgreen/nitron"
+  gem.authors       = ["Matt Green", "Juan Castaneda"]
+  gem.email         = ["juanger@gmail.com"]
+  gem.description   = "CoreData RubyMotion wrapper extracted from nitron"
+  gem.summary       = "CoreData RubyMotion wrapper extracted from nitron"
+  gem.homepage      = "https://github.com/juanger/nitron_data"
 
   gem.files         = `git ls-files`.split($\)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.name          = "nitron"
+  gem.name          = "nitron_data"
   gem.require_paths = ["lib"]
   gem.version       = Nitron::VERSION
 
