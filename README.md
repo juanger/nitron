@@ -43,7 +43,7 @@ A Task model
 
 ```ruby
 class Task < NitronData::Model
-  attribute :name, String
+  attribute :title, String
   attribute :created_at, Time
   attribute :priority, "Decimal"
 end
@@ -77,6 +77,8 @@ Task.where("title contains[cd] ?", "some").count # db call to count the objects 
 Task.count # number of tasks in the system
 
 Task.order("title", ascending: false) # Tasks order in reverse alphabetical order on title attribute
+
+Task.count_by("title") # groups by column and returns count for each value
 
 # Overriding existing query
 scope = Task.where("status = ?", :open)

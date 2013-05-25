@@ -93,6 +93,10 @@ module NitronData
           def where(*args)
             relation.where(*args)
           end
+          
+          def count_by(column)
+            relation.count_by(column)
+          end
         
         private
         

@@ -93,6 +93,20 @@ module NitronData
           self
         end
       
+        def count_by(column)
+          attribute_description = entity.attributesByName[column]
+          
+          ex = NSExpressionDescription.alloc.init
+          ex.setExpression(NSExpression.expressionForFunction("count:", arguments: [NSExpression.expressionForKeyPath(column)]))
+          ex.setExpressionResultType(NSInteger64AttributeType)
+          ex.setName("count")
+        
+          self.propertiesToFetch = [attribute_description, ex]
+          self.setPropertiesToGroupBy([attribute_description])
+          self.resultType = NSDictionaryResultType
+          self
+        end
+      
       end
     end
   end
