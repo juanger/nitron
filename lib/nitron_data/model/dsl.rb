@@ -1,4 +1,4 @@
-module Nitron
+module NitronData
 module Data
 module Model
   module DSL

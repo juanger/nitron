@@ -1,4 +1,4 @@
-module Nitron
+module NitronData
   module Data
     class Relation < NSFetchRequest
       module FinderMethods

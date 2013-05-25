@@ -1,4 +1,4 @@
-module Nitron
+module NitronData
   class RecordInvalid < StandardError
   
     def initialize(record)

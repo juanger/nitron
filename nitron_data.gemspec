@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "nitron_data"
   gem.require_paths = ["lib"]
-  gem.version       = Nitron::VERSION
+  gem.version       = NitronData::VERSION
 
   gem.add_development_dependency 'bacon'
   gem.add_development_dependency 'rake'

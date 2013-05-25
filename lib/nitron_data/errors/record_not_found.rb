@@ -1,4 +1,4 @@
-module Nitron
+module NitronData
   class RecordNotFound < StandardError
   
     def initialize(klass, id)

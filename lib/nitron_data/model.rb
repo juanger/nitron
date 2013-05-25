@@ -1,4 +1,4 @@
-module Nitron
+module NitronData
   class Model < NSManagedObject
     include Data::Model::CoreData
     include Data::Model::DSL

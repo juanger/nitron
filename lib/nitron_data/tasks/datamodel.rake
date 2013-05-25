@@ -147,7 +147,7 @@ PLIST
   end
 end
 
-module Nitron
+module NitronData
   class Model
     class << self
       def attribute(name, type, options={})

@@ -1,4 +1,4 @@
-module Nitron
+module NitronData
   class RecordNotSaved < StandardError
   
     def initialize(record)
