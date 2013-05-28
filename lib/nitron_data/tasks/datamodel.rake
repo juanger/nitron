@@ -90,7 +90,7 @@ namespace :dm do
 
     builder = Nokogiri::XML::Builder.new(:encoding => "UTF-8") do |xml|
       xml.model(model_attributes) do
-        Nitron::Model.subclasses.each do |model|
+        NitronData::Model.subclasses.each do |model|
           xml.entity(:name => model[:name], :representedClassName => model[:name]) do
             model[:attributes].each do |attr|
               xml.attribute(attr)

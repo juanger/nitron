@@ -9,7 +9,7 @@ Installation
 ----------
 Add the following line to your `Gemfile`:
 
-`gem "nitron-data"`
+`gem "nitron-data", :git => "git://github.com/juanger/nitron_data.git"` 
 
 If you haven't already, update your Rakefile to use Bundler. Insert the
 following immediately before `Motion::Project::App.setup`:
